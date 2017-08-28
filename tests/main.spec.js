@@ -4,10 +4,10 @@ const exec = require('child_process').exec;
 const btcConverter = './src/main.js';
 
 describe('Main CLI', () => {
-  it('should return hello world', (done) => {
-    exec(btcConverter, (err, stdout, stderr) => {
+  it('should return version of btc-converter', (done) => {
+    exec(`${btcConverter} --version`, (err, stdout, stderr) => {
       if (err) throw err;
-      expect(stdout.replace('\n', '')).to.be.equal('Hello World!');
+      expect(stdout.replace('\n', '')).to.be.equal('1.0.0');
       done();
     });
   });

@@ -55,5 +55,8 @@
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",
     "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "commander": "^2.11.0"
   }
 }

@@ -1,12 +1,18 @@
 #!/usr/bin/env node
 
+/**
+ * Module dependencies.
+ */
+
 const program = require('commander');
 const pkg = require('../package.json');
+const convertBTC = require('./ConvertBTC.js');
 
 program
   .version(pkg.version)
-  .option('-p, --peppers', 'Add peppers')
-  .option('-P, --pineapple', 'Add pineapple')
-  .option('-b, --bbq-sauce', 'Add bbq sauce')
-  .option('-c, --cheese [type]', 'Add the specified type of cheese [marble]', 'marble')
+  .description('Convert bitcoin to any currency defined')
+  .option('-C --currency <currency>', 'Currency to be converted. (Default is USD)')
+  .option('-A --amount <amount>', 'Amount to be converted. (Default is 1)')
   .parse(process.argv);
+
+convertBTC(program.currency, program.amount);

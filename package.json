@@ -1,7 +1,7 @@
 {
   "name": "btc-converter",
   "version": "1.0.0",
-  "description": "A Bitcoin converter to any currency.",
+  "description": "A Bitcoin converter to any currency using NodeJS and bitcoinaverage.com own API.",
   "main": "index.js",
   "scripts": {
     "clear": "rimraf bin",
